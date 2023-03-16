@@ -411,3 +411,33 @@ if (wrapper) {
     }
   });
 }
+
+const slider = document.querySelector('.slider');
+const items = document.querySelectorAll('.slider-item');
+const container = document.querySelector('.slider-container');
+const arrows = document.querySelectorAll('.slider-arrow')
+
+let index = 0;
+
+const arrowLeft = document.getElementById("arrow_left");
+const arrowRight = document.getElementById("arrow_right");
+
+arrowLeft.addEventListener("click", clickLeft);
+arrowRight.addEventListener("click", clickRight)
+
+function clickLeft() {
+  if (index > 0) {
+    index--
+    container.style.transform = `translateX(-${index * slider.offsetWidth}px)`
+  }
+}
+
+function clickRight() {
+  if (index < (items.length - 1)) {
+    index++
+    container.style.transform = `translateX(-${index * slider.offsetWidth}px)`
+  }
+}
+
+
+
