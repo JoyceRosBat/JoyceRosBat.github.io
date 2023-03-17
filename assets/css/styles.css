@@ -5328,3 +5328,7 @@ button.is-checked {
 .rotate-right {
   transform: rotate(90deg);
 }
+
+.mt-\[-150px\] {
+  margin-top: -150px;
+}
