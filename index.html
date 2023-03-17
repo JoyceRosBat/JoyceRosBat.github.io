@@ -1,140 +1,171 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joyce Rosario Batista - Portfolio</title>
- 
-<link rel="shortcut icon" type="image/x-icon" href="./assets/images/AniJoyce.png">
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
-    
-     <!-- Plugins css -->
-    <link rel="stylesheet" href="./assets/css/mobilemenu.css" />
-    <!-- <link rel="stylesheet" href="./assets/css/glightbox.min.css" /> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <!-- Tailwind css -->
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joyce Rosario Batista - Portfolio</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/images/AniJoyce.png">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap"
+    rel="stylesheet">
+
+  <!-- Plugins css -->
+  <link rel="stylesheet" href="./assets/css/mobilemenu.css" />
+  <!-- <link rel="stylesheet" href="./assets/css/glightbox.min.css" /> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <!-- Tailwind css -->
+  <link rel="stylesheet" href="./assets/css/styles.css" />
 
 
-    <script>
-      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-      if (localStorage.getItem("theme-color") === "dark" || (!("theme-color" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-        document.documentElement.classList.add("dark");
-        document.getElementById("light__to--dark")?.classList.add("dark--version");
-      } 
-      if (localStorage.getItem("theme-color") === "light") {
-        document.documentElement.classList.remove("dark");
-        document.getElementById("light__to--dark")?.classList.remove("dark--version");
-      } 
-    </script>
-  </head>
-  <body class="font-rubik dark:bg-dark_primary_bg">
+  <script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.getItem("theme-color") === "dark" || (!("theme-color" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.documentElement.classList.add("dark");
+      document.getElementById("light__to--dark")?.classList.add("dark--version");
+    }
+    if (localStorage.getItem("theme-color") === "light") {
+      document.documentElement.classList.remove("dark");
+      document.getElementById("light__to--dark")?.classList.remove("dark--version");
+    } 
+  </script>
+</head>
 
-    <!-- Preloader start -->
-    <div id="preloader">
-        <div class="loader--border"></div>
-    </div>
-    <!-- Preloader end -->
+<body class="font-rubik dark:bg-dark_primary_bg">
 
-      <!-- Dark and light button start -->
-      <div class="fixed ltr:right-0 rtl:left-0 top-[50%] translate-y-[-50%] z-50">
-        <button class="bg-accent1 w-[50px] h-[50px] text-white flex justify-center items-center rounded-lg ltr:rounded-tr-none ltr:rounded-br-none rtl:rounded-tl-none rtl:rounded-bl-none" id="light__to--dark">
-          <svg xmlns="http://www.w3.org/2000/svg" class="dark--mode__icon ionicon max-w-[25px] fill-white" viewBox="0 0 512 512"><title>Moon</title><path d="M264 480A232 232 0 0132 248c0-94 54-178.28 137.61-214.67a16 16 0 0121.06 21.06C181.07 76.43 176 104.66 176 136c0 110.28 89.72 200 200 200 31.34 0 59.57-5.07 81.61-14.67a16 16 0 0121.06 21.06C442.28 426 358 480 264 480z"/></svg>
-          
-          <svg xmlns="http://www.w3.org/2000/svg" class="light--mode__icon ionicon max-w-[25px] fill-white" viewBox="0 0 512 512"><title>Sunny</title><path d="M256 118a22 22 0 01-22-22V48a22 22 0 0144 0v48a22 22 0 01-22 22zM256 486a22 22 0 01-22-22v-48a22 22 0 0144 0v48a22 22 0 01-22 22zM369.14 164.86a22 22 0 01-15.56-37.55l33.94-33.94a22 22 0 0131.11 31.11l-33.94 33.94a21.93 21.93 0 01-15.55 6.44zM108.92 425.08a22 22 0 01-15.55-37.56l33.94-33.94a22 22 0 1131.11 31.11l-33.94 33.94a21.94 21.94 0 01-15.56 6.45zM464 278h-48a22 22 0 010-44h48a22 22 0 010 44zM96 278H48a22 22 0 010-44h48a22 22 0 010 44zM403.08 425.08a21.94 21.94 0 01-15.56-6.45l-33.94-33.94a22 22 0 0131.11-31.11l33.94 33.94a22 22 0 01-15.55 37.56zM142.86 164.86a21.89 21.89 0 01-15.55-6.44l-33.94-33.94a22 22 0 0131.11-31.11l33.94 33.94a22 22 0 01-15.56 37.55zM256 358a102 102 0 11102-102 102.12 102.12 0 01-102 102z"/></svg>
-        </button>
-      </div>
-      <!-- Dark and light button end -->
+  <!-- Preloader start -->
+  <div id="preloader">
+    <div class="loader--border"></div>
+  </div>
+  <!-- Preloader end -->
 
-      <!-- Header area start -->
-      <header class="absolute w-full left-0 top-0">
-        <div class="header__sticky py-5">
-          <div class="container mx-auto">
-            <div class="flex justify-between items-center">
-                <div class="logo">
-                    <a href="./index.html">
-                      <!-- <img class="hidden dark:block" src="./assets/images/logo-light.png" alt=""> -->
-                      <!-- <img class="dark:hidden" src="./assets/images/swift.svg" alt="Logo"> -->
-                    </a>
-                </div>
-                <div class="flex items-center md:hidden">
-                  <nav >
-                      <ul class="flex items-center">
-                          <li>
-                            <a href="#home" class="text-[17px] xl:text-[19px] text-primary dark:text-white font-medium hover:text-accent1 dark:hover:text-accent1 transition duration-300 relative after:absolute after:content-[''] after:h-[2px] after:w-0 after:bottom-[3px] ltr:after:left-0 rtl:after:right-0 after:transition-[.5s] after:bg-accent1 py-[8px] hover:after:w-full">Home</a>
-                          </li>
-                          <!-- <li>
+  <!-- Dark and light button start -->
+  <div class="fixed ltr:right-0 rtl:left-0 top-[50%] translate-y-[-50%] z-50">
+    <button
+      class="bg-accent1 w-[50px] h-[50px] text-white flex justify-center items-center rounded-lg ltr:rounded-tr-none ltr:rounded-br-none rtl:rounded-tl-none rtl:rounded-bl-none"
+      id="light__to--dark">
+      <svg xmlns="http://www.w3.org/2000/svg" class="dark--mode__icon ionicon max-w-[25px] fill-white"
+        viewBox="0 0 512 512">
+        <title>Moon</title>
+        <path
+          d="M264 480A232 232 0 0132 248c0-94 54-178.28 137.61-214.67a16 16 0 0121.06 21.06C181.07 76.43 176 104.66 176 136c0 110.28 89.72 200 200 200 31.34 0 59.57-5.07 81.61-14.67a16 16 0 0121.06 21.06C442.28 426 358 480 264 480z" />
+      </svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" class="light--mode__icon ionicon max-w-[25px] fill-white"
+        viewBox="0 0 512 512">
+        <title>Sunny</title>
+        <path
+          d="M256 118a22 22 0 01-22-22V48a22 22 0 0144 0v48a22 22 0 01-22 22zM256 486a22 22 0 01-22-22v-48a22 22 0 0144 0v48a22 22 0 01-22 22zM369.14 164.86a22 22 0 01-15.56-37.55l33.94-33.94a22 22 0 0131.11 31.11l-33.94 33.94a21.93 21.93 0 01-15.55 6.44zM108.92 425.08a22 22 0 01-15.55-37.56l33.94-33.94a22 22 0 1131.11 31.11l-33.94 33.94a21.94 21.94 0 01-15.56 6.45zM464 278h-48a22 22 0 010-44h48a22 22 0 010 44zM96 278H48a22 22 0 010-44h48a22 22 0 010 44zM403.08 425.08a21.94 21.94 0 01-15.56-6.45l-33.94-33.94a22 22 0 0131.11-31.11l33.94 33.94a22 22 0 01-15.55 37.56zM142.86 164.86a21.89 21.89 0 01-15.55-6.44l-33.94-33.94a22 22 0 0131.11-31.11l33.94 33.94a22 22 0 01-15.56 37.55zM256 358a102 102 0 11102-102 102.12 102.12 0 01-102 102z" />
+      </svg>
+    </button>
+  </div>
+  <!-- Dark and light button end -->
+
+  <!-- Header area start -->
+  <header class="absolute w-full left-0 top-0">
+    <div class="header__sticky py-5">
+      <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+          <div class="logo">
+            <a href="./index.html">
+              <!-- <img class="hidden dark:block" src="./assets/images/logo-light.png" alt=""> -->
+              <!-- <img class="dark:hidden" src="./assets/images/swift.svg" alt="Logo"> -->
+            </a>
+          </div>
+          <div class="flex items-center md:hidden">
+            <nav>
+              <ul class="flex items-center">
+                <li>
+                  <a href="#home"
+                    class="text-[17px] xl:text-[19px] text-primary dark:text-white font-medium hover:text-accent1 dark:hover:text-accent1 transition duration-300 relative after:absolute after:content-[''] after:h-[2px] after:w-0 after:bottom-[3px] ltr:after:left-0 rtl:after:right-0 after:transition-[.5s] after:bg-accent1 py-[8px] hover:after:w-full">Home</a>
+                </li>
+                <!-- <li>
                             <a href="#about" class="text-[17px] xl:text-[19px] text-primary dark:text-white font-medium hover:text-accent1 dark:hover:text-accent1 transition duration-300 ltr:ml-[26px] ltr:xl:ml-[44px] rtl:mr-[26px] rtl:xl:mr-[44px] relative after:absolute after:content-[''] after:h-[2px] after:w-0 after:bottom-[3px] ltr:after:left-0 rtl:after:right-0 after:transition-[.5s] after:bg-accent1 py-[8px] hover:after:w-full">About</a>
                           </li> -->
-                          <li>
-                            <a href="#experience" class="text-[17px] xl:text-[19px] text-primary dark:text-white font-medium hover:text-accent1 dark:hover:text-accent1 transition duration-300 ltr:ml-[26px] ltr:xl:ml-[44px] rtl:mr-[26px] rtl:xl:mr-[44px] relative after:absolute after:content-[''] after:h-[2px] after:w-0 after:bottom-[3px] ltr:after:left-0 rtl:after:right-0 after:transition-[.5s] after:bg-accent1 py-[8px] hover:after:w-full">Experience</a>
-                          </li>
-                          <li>
-                            <a href="#education" class="text-[17px] xl:text-[19px] text-primary dark:text-white font-medium hover:text-accent1 dark:hover:text-accent1 transition duration-300 ltr:ml-[26px] ltr:xl:ml-[44px] rtl:mr-[26px] rtl:xl:mr-[44px] relative after:absolute after:content-[''] after:h-[2px] after:w-0 after:bottom-[3px] ltr:after:left-0 rtl:after:right-0 after:transition-[.5s] after:bg-accent1 py-[8px] hover:after:w-full">Education</a>
-                          </li>
-                          <li>
-                            <a href="#skills" class="text-[17px] xl:text-[19px] text-primary dark:text-white font-medium hover:text-accent1 dark:hover:text-accent1 transition duration-300 ltr:ml-[26px] ltr:xl:ml-[44px] rtl:mr-[26px] rtl:xl:mr-[44px] relative after:absolute after:content-[''] after:h-[2px] after:w-0 after:bottom-[3px] ltr:after:left-0 rtl:after:right-0 after:transition-[.5s] after:bg-accent1 py-[8px] hover:after:w-full">Skills</a>
-                          </li>
-                          <li>
-                            <a href="#contact" class="text-[17px] xl:text-[19px] text-primary dark:text-white font-medium hover:text-accent1 dark:hover:text-accent1 transition duration-300 ltr:ml-[26px] ltr:xl:ml-[44px] rtl:mr-[26px] rtl:xl:mr-[44px] relative after:absolute after:content-[''] after:h-[2px] after:w-0 after:bottom-[3px] ltr:after:left-0 rtl:after:right-0 after:transition-[.5s] after:bg-accent1 py-[8px] hover:after:w-full">Contact</a>
-                          </li>
-                      </ul> 
-                  </nav>
-                  <!-- <button class="flex bg-accent1 lg:px-[15px] px-[12px] xl:py-[12px] py-[10px] rounded-[2rem] text-[16px] xl:text-[18px] font-medium text-white items-center ltr:ml-[32px] rtl:mr-[32px] transition duration-300 relative after:absolute :after:content-[''] after:bg-primary after:h-full after:w-full after:bottom-0 after:left-0 after:rounded-[2rem] after:trasition after:duration-300 after:opacity-0 hover:after:opacity-[1]">
+                <li>
+                  <a href="#experience"
+                    class="text-[17px] xl:text-[19px] text-primary dark:text-white font-medium hover:text-accent1 dark:hover:text-accent1 transition duration-300 ltr:ml-[26px] ltr:xl:ml-[44px] rtl:mr-[26px] rtl:xl:mr-[44px] relative after:absolute after:content-[''] after:h-[2px] after:w-0 after:bottom-[3px] ltr:after:left-0 rtl:after:right-0 after:transition-[.5s] after:bg-accent1 py-[8px] hover:after:w-full">Experience</a>
+                </li>
+                <li>
+                  <a href="#education"
+                    class="text-[17px] xl:text-[19px] text-primary dark:text-white font-medium hover:text-accent1 dark:hover:text-accent1 transition duration-300 ltr:ml-[26px] ltr:xl:ml-[44px] rtl:mr-[26px] rtl:xl:mr-[44px] relative after:absolute after:content-[''] after:h-[2px] after:w-0 after:bottom-[3px] ltr:after:left-0 rtl:after:right-0 after:transition-[.5s] after:bg-accent1 py-[8px] hover:after:w-full">Education</a>
+                </li>
+                <li>
+                  <a href="#skills"
+                    class="text-[17px] xl:text-[19px] text-primary dark:text-white font-medium hover:text-accent1 dark:hover:text-accent1 transition duration-300 ltr:ml-[26px] ltr:xl:ml-[44px] rtl:mr-[26px] rtl:xl:mr-[44px] relative after:absolute after:content-[''] after:h-[2px] after:w-0 after:bottom-[3px] ltr:after:left-0 rtl:after:right-0 after:transition-[.5s] after:bg-accent1 py-[8px] hover:after:w-full">Skills</a>
+                </li>
+                <li>
+                  <a href="#contact"
+                    class="text-[17px] xl:text-[19px] text-primary dark:text-white font-medium hover:text-accent1 dark:hover:text-accent1 transition duration-300 ltr:ml-[26px] ltr:xl:ml-[44px] rtl:mr-[26px] rtl:xl:mr-[44px] relative after:absolute after:content-[''] after:h-[2px] after:w-0 after:bottom-[3px] ltr:after:left-0 rtl:after:right-0 after:transition-[.5s] after:bg-accent1 py-[8px] hover:after:w-full">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- <button class="flex bg-accent1 lg:px-[15px] px-[12px] xl:py-[12px] py-[10px] rounded-[2rem] text-[16px] xl:text-[18px] font-medium text-white items-center ltr:ml-[32px] rtl:mr-[32px] transition duration-300 relative after:absolute :after:content-[''] after:bg-primary after:h-full after:w-full after:bottom-0 after:left-0 after:rounded-[2rem] after:trasition after:duration-300 after:opacity-0 hover:after:opacity-[1]">
                     <span class="icon bg-[#EFEBEB] text-accent1 w-[34px] h-[34px] rounded-full flex items-center justify-center ltr:xl:mr-[15px] ltr:mr-[10px] rtl:xl:ml-[15px] rtl:ml-[10px] relative z-[8] flex-shrink-0">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                     </span>
                     <span class="ltr:xl:pr-[5px] ltr:lg:pr-[5px] rtl:xl:pl-[5px] rtl:lg:pl-[5px] relative z-[8] flex-shrink-0">Download CV</span>
                   </button> -->
-                </div>
-                <div class="lg:hidden">
-                  <button class="offcanvas__header--menu__open--btn text-primary dark:text-white " data-offcanvas>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                  </button>
-                </div>
-            </div>
-        </div>
-         <!-- Start Offcanvas header menu -->
-        <div class="offcanvas__header lg:hidden dark:bg-gray-800">
-          <div class="offcanvas__inner">
-              <div class="offcanvas__logo">
-                  <a class="offcanvas__logo_link flex items-center" href="index.html">
-                      <img src="./assets/images/AniJoyce.png" alt="Grocee Logo" width="36" height="36"> Joyce Rosario Batista
-                      <!-- <img class="hidden dark:block" src="./assets/images/logo-light.png" alt="Grocee Logo" width="158" height="36"> -->
-                  </a>
-                  <button class="offcanvas__close--btn dark:text-white" data-offcanvas>close</button>
-              </div>
-              <nav class="offcanvas__menu">
-                  <ul class="offcanvas__menu_ul">
-                      <li class="offcanvas__menu_li">
-                          <a class="offcanvas__menu_item dark:text-white" href="#home">Home</a>
-                      </li>
-                      <!-- <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white" href="#about">About</a></li> -->
-                      <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white" href="#experience">Experience</a></li>
-                      <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white" href="#education">Education</a></li>
-                      <!-- <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white" href="#portfolio">Portfolio</a></li> -->
-                      <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white" href="#skills">Skills</a></li>
-                      <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white" href="#contact">Contact</a></li>
-                  </ul>
-              </nav>
-              
+          </div>
+          <div class="lg:hidden">
+            <button class="offcanvas__header--menu__open--btn text-primary dark:text-white " data-offcanvas>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-menu">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
           </div>
         </div>
-        <!-- End Offcanvas header menu -->
+      </div>
+      <!-- Start Offcanvas header menu -->
+      <div class="offcanvas__header lg:hidden dark:bg-gray-800">
+        <div class="offcanvas__inner">
+          <div class="offcanvas__logo">
+            <a class="offcanvas__logo_link flex items-center" href="index.html">
+              <img src="./assets/images/AniJoyce.png" alt="Grocee Logo" width="36" height="36"> Joyce Rosario Batista
+              <!-- <img class="hidden dark:block" src="./assets/images/logo-light.png" alt="Grocee Logo" width="158" height="36"> -->
+            </a>
+            <button class="offcanvas__close--btn dark:text-white" data-offcanvas>close</button>
+          </div>
+          <nav class="offcanvas__menu">
+            <ul class="offcanvas__menu_ul">
+              <li class="offcanvas__menu_li">
+                <a class="offcanvas__menu_item dark:text-white" href="#home">Home</a>
+              </li>
+              <!-- <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white" href="#about">About</a></li> -->
+              <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white"
+                  href="#experience">Experience</a></li>
+              <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white"
+                  href="#education">Education</a></li>
+              <!-- <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white" href="#portfolio">Portfolio</a></li> -->
+              <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white" href="#skills">Skills</a>
+              </li>
+              <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
         </div>
-        
+      </div>
+      <!-- End Offcanvas header menu -->
+    </div>
 
-      </header>
-      <!-- Header area end -->
 
-      <!-- Main wrapper start -->
-      <main>
-        <!-- Hero section start -->
-        <!-- <section class="bg-cover bg-no-repeat bg-center sm:h-full only-md:h-screen lg:min-h-screen flex justify-center items-center overflow-hidden bg-[url('../images/hero-bg-img.png')] bg-[#DAEEF1] dark:bg-[url('../images/hero-bg-img-dark.png')] dark:bg-dark_primary_bg dark:border-b dark:border-dark_accent1" id="home">
+  </header>
+  <!-- Header area end -->
+
+  <!-- Main wrapper start -->
+  <main>
+    <!-- Hero section start -->
+    <!-- <section class="bg-cover bg-no-repeat bg-center sm:h-full only-md:h-screen lg:min-h-screen flex justify-center items-center overflow-hidden bg-[url('../images/hero-bg-img.png')] bg-[#DAEEF1] dark:bg-[url('../images/hero-bg-img-dark.png')] dark:bg-dark_primary_bg dark:border-b dark:border-dark_accent1" id="home">
             <div class="container mx-auto flex sm:flex-col items-center justify-center lg:mt-[40px] only-md:mt-[40px] sm:pt-[100px] sm:pb-[70px]">
                 <div class="lg:max-w-[40%] sm:max-w-[60%] xs:max-w-[85%] only-md:max-w-[40%] flex justify-end">
                   <div class="relative only-xl:max-w-[70%]">
@@ -172,526 +203,662 @@
                 </div>
             </div>
         </section> -->
-        <!-- Hero section end -->
+    <!-- Hero section end -->
 
-        <!-- About me section start -->
-        <section class="bg-cover bg-no-repeat bg-center bg-[url('../images/about-me-bg.png')] bg-[#ECF1F6] dark:bg-dark_primary_bg dark:bg-none py-[70px] lg:py-[100px] dark:border-t dark:border-b dark:border-dark_accent1" id="home">
-          <div class="container mx-auto">
-              <div class="flex justify-between sm:flex-wrap sm:flex-col-reverse">
-                  <div class="w-full lg:max-w-[550px]">
-                      <div>
-                        <span class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px]">Hello, I'm</span>
-                        <h2 class="text-[24px] only-md:text-[32px] lg:text-[48px] font-bold font-heebo leading-[36px] lg:leading-[58px] text-[#000248] dark:text-white ltr:lg:pr-[50px] rtl:lg:pl-[50px]">Joyce</h2>
-                        <p class="text-[#636363] dark:text-slate-200 text-[17px] leading-[28px] lg:max-w-[472px] w-full">I've been working as iOS developer since 2016. I started developing with Objective-C. Currently I'm working with Swift, UIKit, Combine, MVVM, etc. I also lead, teach and guide a small team. I'm a dedicated and proactive person who loves development and who loves to help others.</p>
-                      </div>
-                      <div class="flex items-center gap-[18px] flex-wrap mt-[30px] sm:justify-center">
-                        <!-- <a href="#about" class="btn outline-btn text-accent1 shrink-0">About Me</a> -->
-                        <div class="flex items-center flex-wrap gap-[15px] sm:justify-center">
-                          <span class="font-heebo lg:text-[22px] md:text-[18px] font-semibold shrink-0 text-primary dark:text-white">Follow Me: </span>
-                          <div class="flex items-center">
-                            <a href="http://linkedin.com/in/joyce-rosario-batista" class="w-[30px] h-[30px] flex items-center justify-center text-accent1 border border-accent1 transition duration-300 hover:bg-accent1 hover:text-white rounded-full">
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="currentColor" d="M16.005-.011c-8.837 0-16 7.163-16 16 0 8.836 7.163 16 16 16s16-7.164 16-16-7.163-16-16-16z"/><path fill="#FFF" d="M24.299 22.932v-6.137c0-3.288-1.755-4.818-4.096-4.818-1.889 0-2.735 1.039-3.206 1.768v-1.517h-3.558c.047 1.005 0 10.704 0 10.704h3.558v-5.978c0-.319.023-.639.117-.867.257-.639.842-1.301 1.825-1.301 1.288 0 1.803.981 1.803 2.42v5.727l3.557-.001zM9.69 10.767c1.24 0 2.013-.823 2.013-1.85-.023-1.05-.773-1.849-1.99-1.849s-2.012.798-2.012 1.848c0 1.028.772 1.85 1.967 1.85h.022zm1.779 12.165V12.228H7.912v10.704h3.557z"/></svg>
-                            </a>
-                            <a href="http://github.com/joycerosbat" class="w-[30px] h-[30px] flex items-center justify-center text-accent1 border border-accent1 transition duration-300 hover:bg-accent1 hover:text-white rounded-full">
-                              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12C0 17.31 3.435 21.795 8.205 23.385C8.805 23.49 9.03 23.13 9.03 22.815C9.03 22.53 9.015 21.585 9.015 20.58C6 21.135 5.22 19.845 4.98 19.17C4.845 18.825 4.26 17.76 3.75 17.475C3.33 17.25 2.73 16.695 3.735 16.68C4.68 16.665 5.355 17.55 5.58 17.91C6.66 19.725 8.385 19.215 9.075 18.9C9.18 18.12 9.495 17.595 9.84 17.295C7.17 16.995 4.38 15.96 4.38 11.37C4.38 10.065 4.845 8.985 5.61 8.145C5.49 7.845 5.07 6.615 5.73 4.965C5.73 4.965 6.735 4.65 9.03 6.195C9.99 5.925 11.01 5.79 12.03 5.79C13.05 5.79 14.07 5.925 15.03 6.195C17.325 4.635 18.33 4.965 18.33 4.965C18.99 6.615 18.57 7.845 18.45 8.145C19.215 8.985 19.68 10.05 19.68 11.37C19.68 15.975 16.875 16.995 14.205 17.295C14.64 17.67 15.015 18.39 15.015 19.515C15.015 21.12 15 22.41 15 22.815C15 23.13 15.225 23.505 15.825 23.385C18.2072 22.5808 20.2773 21.0498 21.7438 19.0074C23.2103 16.9651 23.9994 14.5143 24 12C24 5.37 18.63 0 12 0Z" fill="#000000"/>
-                                </svg>  
-                            </a>
-                          </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="sm:mb-[50px]">
-                      <div class="relative">
-                        <!-- <img class="relative z-10 sm:mx-auto" src="./assets/images/swift-logo.svg" alt=""> -->
-                        <img class="absolute" src="./assets/images/swift-logo.svg" alt="">
-                        <div class="relative"> 
-                          <video width="500" height="500" autoplay muted loop>
-                            <source src="./assets/videos/joyce-moji.mov" type="video/mov">
-                            <source src="./assets/videos/joyce-moji.mp4" type="video/mp4">
-                          </video>
-                        </div>
-                        <span class="absolute top-[100px] lg:top-[210px] right-[-20px] only-md:right-[-10px] only-xl:max-w-[65px] lg:max-w-[80px] xl:max-w-[105px] sm:max-w-[50px] only-md:max-w-[70px] animateUpDown"><img src="./assets/images/app-store.svg" alt="Swift"></span>
-                        <span class="absolute top-[80px] left-[-40px] md:left-[-10px] only-xl:max-w-[65px] lg:max-w-[80px] xl:max-w-[105px] sm:max-w-[50px] only-md:max-w-[70px] animateUpDown"><img src="./assets/images/xcode.webp" alt=""></span>
-                        <!-- <span class="absolute sm:w-[100px] sm:h-[100px] only-md:w-[150px] only-md:h-[150px] lg:w-[200px] lg:h-[200px] xl:w-[250px] xl:h-[250px] border-[8px] lg:border-[13px] border-accent1 rounded-full xs:bottom-[-25%] sm:bottom-[-12%] bottom-[-18%] ltr:sm:left-[3%] ltr:left-[-18%] rtl:sm:right-[3%] rtl:right-[-18%] animateUpDown"></span> -->
-                      </div>
-                      <!-- <div class="text-center mt-[30px]">
+    <!-- About me section start -->
+    <section
+      class="bg-cover bg-no-repeat bg-center bg-[url('../images/about-me-bg.png')] bg-[#ECF1F6] dark:bg-dark_primary_bg dark:bg-none py-[70px] lg:py-[100px] dark:border-t dark:border-b dark:border-dark_accent1"
+      id="home">
+      <div class="container mx-auto">
+        <div class="flex justify-between sm:flex-wrap sm:flex-col-reverse">
+          <div class="w-full lg:max-w-[550px]">
+            <div>
+              <span class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px]">Hello, I'm</span>
+              <h2
+                class="text-[24px] only-md:text-[32px] lg:text-[48px] font-bold font-heebo leading-[36px] lg:leading-[58px] text-[#000248] dark:text-white ltr:lg:pr-[50px] rtl:lg:pl-[50px]">
+                Joyce</h2>
+              <p class="text-[#636363] dark:text-slate-200 text-[17px] leading-[28px] lg:max-w-[472px] w-full">I've been
+                working as iOS developer since 2016. I started developing with Objective-C. Currently I'm working with
+                Swift, UIKit, Combine, MVVM, etc. I also lead, teach and guide a small team. I'm a dedicated and
+                proactive person who loves development and who loves to help others.</p>
+            </div>
+            <div class="flex items-center gap-[18px] flex-wrap mt-[30px] sm:justify-center">
+              <!-- <a href="#about" class="btn outline-btn text-accent1 shrink-0">About Me</a> -->
+              <div class="flex items-center flex-wrap gap-[15px] sm:justify-center">
+                <span
+                  class="font-heebo lg:text-[22px] md:text-[18px] font-semibold shrink-0 text-primary dark:text-white">Follow
+                  Me: </span>
+                <div class="flex items-center justify-between">
+                  <a href="http://linkedin.com/in/joyce-rosario-batista"
+                    class="w-[30px] h-[30px] flex items-center justify-center text-accent1 border border-accent1 transition duration-300 hover:bg-accent1 hover:text-white rounded-full mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                      <path fill="currentColor"
+                        d="M16.005-.011c-8.837 0-16 7.163-16 16 0 8.836 7.163 16 16 16s16-7.164 16-16-7.163-16-16-16z" />
+                      <path fill="#FFF"
+                        d="M24.299 22.932v-6.137c0-3.288-1.755-4.818-4.096-4.818-1.889 0-2.735 1.039-3.206 1.768v-1.517h-3.558c.047 1.005 0 10.704 0 10.704h3.558v-5.978c0-.319.023-.639.117-.867.257-.639.842-1.301 1.825-1.301 1.288 0 1.803.981 1.803 2.42v5.727l3.557-.001zM9.69 10.767c1.24 0 2.013-.823 2.013-1.85-.023-1.05-.773-1.849-1.99-1.849s-2.012.798-2.012 1.848c0 1.028.772 1.85 1.967 1.85h.022zm1.779 12.165V12.228H7.912v10.704h3.557z" />
+                    </svg>
+                  </a>
+                  <a href="http://github.com/joycerosbat"
+                    class="w-[30px] h-[30px] flex items-center justify-center text-accent1 border border-accent1 transition duration-300 hover:bg-accent1 hover:text-white rounded-full">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 0C5.37 0 0 5.37 0 12C0 17.31 3.435 21.795 8.205 23.385C8.805 23.49 9.03 23.13 9.03 22.815C9.03 22.53 9.015 21.585 9.015 20.58C6 21.135 5.22 19.845 4.98 19.17C4.845 18.825 4.26 17.76 3.75 17.475C3.33 17.25 2.73 16.695 3.735 16.68C4.68 16.665 5.355 17.55 5.58 17.91C6.66 19.725 8.385 19.215 9.075 18.9C9.18 18.12 9.495 17.595 9.84 17.295C7.17 16.995 4.38 15.96 4.38 11.37C4.38 10.065 4.845 8.985 5.61 8.145C5.49 7.845 5.07 6.615 5.73 4.965C5.73 4.965 6.735 4.65 9.03 6.195C9.99 5.925 11.01 5.79 12.03 5.79C13.05 5.79 14.07 5.925 15.03 6.195C17.325 4.635 18.33 4.965 18.33 4.965C18.99 6.615 18.57 7.845 18.45 8.145C19.215 8.985 19.68 10.05 19.68 11.37C19.68 15.975 16.875 16.995 14.205 17.295C14.64 17.67 15.015 18.39 15.015 19.515C15.015 21.12 15 22.41 15 22.815C15 23.13 15.225 23.505 15.825 23.385C18.2072 22.5808 20.2773 21.0498 21.7438 19.0074C23.2103 16.9651 23.9994 14.5143 24 12C24 5.37 18.63 0 12 0Z"
+                        fill="#000000" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sm:mb-[50px]">
+            <div class="relative">
+              <!-- <img class="relative z-10 sm:mx-auto" src="./assets/images/swift-logo.svg" alt=""> -->
+              <img class="absolute" src="./assets/images/swift-logo.svg" alt="">
+              <div class="relative">
+                <video width="500" height="500" autoplay muted loop>
+                  <source src="./assets/videos/joyce-moji.mov" type="video/mov">
+                  <source src="./assets/videos/joyce-moji.mp4" type="video/mp4">
+                </video>
+              </div>
+              <span
+                class="absolute top-[100px] lg:top-[210px] right-[-20px] only-md:right-[-10px] only-xl:max-w-[65px] lg:max-w-[80px] xl:max-w-[105px] sm:max-w-[50px] only-md:max-w-[70px] animateUpDown right-2"><img
+                  src="./assets/images/app-store.svg" alt="Swift"></span>
+              <span
+                class="absolute top-[80px] left-[-40px] md:left-[-10px] only-xl:max-w-[65px] lg:max-w-[80px] xl:max-w-[105px] sm:max-w-[50px] only-md:max-w-[70px] animateUpDown"><img
+                  src="./assets/images/xcode.webp" alt=""></span>
+              <!-- <span class="absolute sm:w-[100px] sm:h-[100px] only-md:w-[150px] only-md:h-[150px] lg:w-[200px] lg:h-[200px] xl:w-[250px] xl:h-[250px] border-[8px] lg:border-[13px] border-accent1 rounded-full xs:bottom-[-25%] sm:bottom-[-12%] bottom-[-18%] ltr:sm:left-[3%] ltr:left-[-18%] rtl:sm:right-[3%] rtl:right-[-18%] animateUpDown"></span> -->
+            </div>
+            <!-- <div class="text-center mt-[30px]">
                         <h4 class="font-heebo text-[50px] lg:text-[80px] font-bold leading-[1] text-white title-stroke">6+</h4>
                          <span class="font-bold sm:text-[20px] only-md:text-[24px] lg:text-[30px] font-heebo text-primary dark:text-white">Experience Working</span>
                       </div> -->
-                  </div>
-              </div>
           </div>
-        </section>
-        <!-- About me section end -->
+        </div>
+      </div>
+    </section>
+    <!-- About me section end -->
 
-        <!--  Resume section start -->
-        <section id="experience" class="relative lg:py-[100px] md:py-[70px]">
-          <div class="container mx-auto">
-            <!-- Section title start -->
-             <div class="flex justify-between items-center gap-[20px] lg:gap-[30px] mb-[55px] md:flex-wrap md:text-center">
-                  <div class="max-w-full lg:max-w-[575px] w-full">
-                    <span class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px]">EXPERICNCE</span>
-                    <h2 class="text:[28px] lg:text-[48px] font-bold font-heebo leading-[36x] lg:leading-[58px] text-[#000248] dark:text-white">Resume of Experience</h2>
+    <!--  Resume section start -->
+    <section id="experience" class="relative lg:py-[100px] md:py-[70px]">
+      <div class="container mx-auto">
+        <!-- Section title start -->
+        <div class="flex justify-between items-center gap-[20px] lg:gap-[30px] md:flex-wrap md:text-center">
+          <div class="max-w-full lg:max-w-[575px] w-full">
+            <span class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px]">EXPERICNCE</span>
+            <h2
+              class="text:[28px] lg:text-[48px] font-bold font-heebo leading-[36x] lg:leading-[58px] text-[#000248] dark:text-white">
+              Resume of Experience</h2>
+          </div>
+          <!-- Section title end -->
+
+          <!-- Resume wrapper start -->
+          <div class="flex flex-wrap flex-col overflow-hidden">
+
+            <!-- Skill -->
+            <div class="slider w-full">
+              <span class="slider-arrow left">
+                <button id="arrow_left"
+                  class="rotate-left ltr:right-5 rtl:left-5 z-50 bg-accent1 text-white shadow-[0_2px_22px_rgba(0,0,0,0.16)] cursor-pointer translate-y-12 transition-all duration-300 leading-[1] w-11 h-11 rounded-full border-none flex items-center justify-center hover:bg-primary dark:hover:bg-dark_accent1">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ionicon w-6 leading-[1]" viewBox="0 0 512 512">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="48"
+                      d="M112 244l144-144 144 144M256 120v292" />
+                  </svg>
+                </button>
+                <!-- &lt; -->
+              </span>
+              <div class="slider-container">
+                <!-- border line -->
+                <!-- <div class="absolute w-[1px] ltr:left-0 rtl:right-0 top-[10px] bottom-[5px] bg-accent1"></div> -->
+                <!-- border line  end-->
+
+                <!-- Single resume start -->
+                <div class="slider-item">
+                  <span
+                    class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
+                  <div class="w-[70px] h-[70px]">
+                    <span
+                      class="w-[50px] h-[50px] hidden bg-accent1 text-white flex items-center rounded-full justify-center">
+                      <svg width="25" height="40" fill="currentColor" stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                          d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z" />
+                      </svg>
+                    </span>
                   </div>
-                  <div class="md:grow">
-                    <!-- <p class="text-[#636363] dark:text-slate-200 text-[17px] leading-[28px] lg:max-w-[472px] w-full">Promote your blog posts, case udie, and product ouncems
-                      with the the branded videoscustomers coming back for services Makes best effort.</p>
-                  </div> -->
-             </div>
-            <!-- Section title end -->
-
-            <!-- Resume wrapper start -->
-            <div class="flex flex-wrap flex-col w-full">
-
-              <!-- Skill -->
-              <div class="slider max-w-full lg:max-w-[50%]">
-                <span class="slider-arrow left">
-                  <button id="arrow_left" class="rotate-left ltr:right-5 rtl:left-5 z-50 bg-accent1 text-white shadow-[0_2px_22px_rgba(0,0,0,0.16)] cursor-pointer translate-y-12 transition-all duration-300 leading-[1] w-11 h-11 rounded-full border-none flex items-center justify-center hover:bg-primary dark:hover:bg-dark_accent1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon w-6 leading-[1]" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round"  stroke-width="48" d="M112 244l144-144 144 144M256 120v292"/></svg>
-                  </button>  
-                  <!-- &lt; -->
-                </span>
-                  <div class="slider-container">
-                      <!-- border line -->
-                      <!-- <div class="absolute w-[1px] ltr:left-0 rtl:right-0 top-[10px] bottom-[5px] bg-accent1"></div> -->
-                      <!-- border line  end-->
-
-                      <!-- Single resume start -->
-                      <div class="slider-item">
-                        <span class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
-                        <div class="w-[70px] h-[70px]">
-                          <span class="w-[50px] h-[50px] bg-accent1 text-white flex items-center rounded-full justify-center">
-                            <svg width="25" height="40" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
-                          </span>
-                        </div>
-                        <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
-                            <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
-                              <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">iOS Lead</h3>
-                              <!-- <span class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">Plexus Tech</span> -->
-                            </div>
-                            <span class="text-[17px] font-medium text-accent1 relative before:absolute before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">Plexus Tech</span>
-                            <span class="text-[17px] font-medium relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2022-Current</span>
-                            <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Leading and Development of <b>Santander Particulares</b> app using:</p>
-                            <li>Swift</li>
-                            <li>UIKit</li>
-                            <li>MVVM</li>
-                            <li>Combine</li>
-                            <li>Dependency Inyection</li>
-                            <li>API Rest</li>
-                          <!-- <span class="text-[17px] font-medium text-accent1 relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2022-Now</span> -->
-                        </div>
+                  <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
+                    <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
+                      <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">iOS
+                        Lead</h3>
+                      <!-- <span class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">Plexus Tech</span> -->
                     </div>
-                    <!-- Single resume end -->
-
-                      <!-- Single resume start -->
-                      <div class="slider-item">
-                        <span class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
-                        <div class="w-[70px] h-[70px]">
-                          <span class="w-[50px] h-[50px] bg-accent1 text-white flex items-center rounded-full justify-center">
-                            <svg width="25" height="40" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
-                          </span>
-                        </div>
-                        <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
-                            <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
-                              <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">iOS Lead</h3>
-                              <!-- <span class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">Colkie</span> -->
-                            </div>
-                            <span class="text-[17px] font-medium text-accent1 relative before:absolute before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">Colkie</span>
-                            <span class="text-[17px] font-medium relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2022</span>
-                            <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Leading and Development of <b>Colkie</b> app using:</p>
-                            <li>Swift</li>
-                            <li>SwiftUI</li>
-                            <li>UIKit</li>
-                            <li>Combine</li>
-                            <li>Async/Await</li>
-                            <li>VIPER</li>
-                            <li>IAP Purchase</li>
-                            <li>AVFoundation</li>
-                            <li>SQLite</li>
-                            <li>API Rest</li>
-                          <!-- <span class="text-[17px] font-medium text-accent1 relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2022</span> -->
-                        </div>
-                    </div>
-                    <!-- Single resume end -->
-
-                      <!-- Single resume start -->
-                      <div class="slider-item">
-                        <span class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
-                        <div class="w-[70px] h-[70px]">
-                          <span class="w-[50px] h-[50px] bg-accent1 text-white flex items-center rounded-full justify-center">
-                            <svg width="25" height="40" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
-                          </span>
-                        </div>
-                        <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
-                            <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
-                              <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">iOS Lead</h3>
-                              <!-- <span class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">Plexus Tech</span> -->
-                            </div>
-                            <span class="text-[17px] font-medium text-accent1 relative before:absolute before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">Plexus Tech</span>
-                            <span class="text-[17px] font-medium relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2020-2022</span>
-                            <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Leading and Development of <b>Santander Empresas</b> app using:</p>
-                            <li>Swift</li>
-                            <li>Objective-C</li>
-                            <li>UIKit</li>
-                            <li>VIPER</li>
-                            <li>API Rest / SOAP</li>
-                          <!-- <span class="text-[17px] font-medium text-accent1 relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2020-2022</span> -->
-                        </div>
-                    </div>
-                    <!-- Single resume end -->
-                      
-                      <!-- Single resume start -->
-                      <div class="slider-item">
-                        <span class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
-                        <div class="w-[70px] h-[70px]">
-                          <span class="w-[50px] h-[50px] bg-accent1 text-white flex items-center rounded-full justify-center">
-                            <svg width="25" height="40" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
-                          </span>
-                        </div>
-                        <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
-                            <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
-                              <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">iOS App developer</h3>
-                              <!-- <span class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">2Coders</span> -->
-                            </div>
-                            <span class="text-[17px] font-medium text-accent1 relative before:absolute before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2Coders</span>
-                            <span class="text-[17px] font-medium relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2020</span>
-                            <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Development and maintenance of <b>NFL Gamepass International</b> app using:</p>
-                            <li>Swift</li>
-                            <li>UIKit</li>
-                            <li>IAP Purchase</li>
-                            <li>Video streaming (DIVA framework) </li>
-                            <li>API Rest</li>
-                            <li>Urban Airship</li>
-                          <!-- <span class="text-[17px] font-medium text-accent1 relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2020</span> -->
-                        </div>
-                    </div>
-                    <!-- Single resume end -->
-
-                    <!-- Single resume start -->
-                    <div class="slider-item">
-                        <span class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
-                        <div class="w-[70px] h-[70px]">
-                          <span class="w-[50px] h-[50px] bg-accent1 text-white flex items-center rounded-full justify-center">
-                            <svg width="25" height="40" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
-                          </span>
-                        </div>
-                        <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
-                            <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
-                              <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">iOS App developer</h3>
-                              <!-- <span class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">Tempbuddy</span> -->
-                            </div>
-                            <span class="text-[17px] font-medium text-accent1 relative before:absolute before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">Tempbuddy</span>
-                            <span class="text-[17px] font-medium relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2019-2020</span>
-                            <!-- <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Development and maintenance of <b>Tempbuddy</b> app using:</p> -->
-                            <li>Swift</li>
-                            <li>UIKit</li>
-                            <li>CoreData</li>
-                            <li>API Rest</li>
-                            <li>Urban Airship</li>
-                          <!-- <span class="text-[17px] font-medium text-accent1 relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2019-2020</span> -->
-                        </div>
-                    </div>
-                    <!-- Single resume end -->
-
-                    <!-- Single resume start -->
-                    <div class="slider-item">
-                        <span class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
-                        <div class="w-[70px] h-[70px]">
-                          <span class="w-[50px] h-[50px] bg-accent1 text-white flex items-center rounded-full justify-center">
-                            <svg width="25" height="40" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
-                          </span>
-                        </div>
-                        <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
-                            <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
-                              <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">Mobile App Developer</h3>
-                              <!-- <span class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">ATOS IT Solutions and Services Iberia</span> -->
-                            </div>
-                            <span class="text-[17px] font-medium text-accent1 relative before:absolute before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">ATOS IT Solutions and Services Iberia</span>
-                            <span class="text-[17px] font-medium relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2016-2019</span>
-                            <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Development and maintenance apps (<b>Correos, McDonalds, BBVA...</b>) using:</p>
-                            <li>Swift</li>
-                            <li>Objective-C</li>
-                            <li>UIKit</li>
-                            <li>API Rest</li>
-                            <li>Firebase Cloud Messaging</li>
-                            <li>Cordova</li>
-                            <li>JQuery</li>
-                            <li>Angular</li>
-                            <li>Typescript</li>
-                        </div>
-                    </div>
-                    <!-- Single resume end -->
+                    <span
+                      class="text-[17px] font-medium text-accent1 relative before:absolute before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">Plexus
+                      Tech</span>
+                    <span
+                      class="text-[17px] font-medium relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2022-Current</span>
+                    <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Leading and Development of
+                      <b>Santander Particulares</b> app using:
+                    </p>
+                    <li>Swift</li>
+                    <li>UIKit</li>
+                    <li>MVVM</li>
+                    <li>Combine</li>
+                    <li>Dependency Inyection</li>
+                    <li>API Rest</li>
+                    <!-- <span class="text-[17px] font-medium text-accent1 relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2022-Now</span> -->
                   </div>
-                  <span class="slider-arrow right">
-                    <button id="arrow_right" class="rotate-right ltr:right-5 rtl:left-5 z-50 bg-accent1 text-white shadow-[0_2px_22px_rgba(0,0,0,0.16)] cursor-pointer translate-y-12 transition-all duration-300 leading-[1] w-11 h-11 rounded-full border-none flex items-center justify-center hover:bg-primary dark:hover:bg-dark_accent1">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="ionicon w-6 leading-[1]" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round"  stroke-width="48" d="M112 244l144-144 144 144M256 120v292"/></svg>
-                    </button>  
-                     <!-- &gt;  -->
-                  </span>
                 </div>
-              <!-- Skill -->
-            </div>
-            <!-- Resume wrapper end -->
-          </div>
-          <div class="absolute bottom-0 left-0 w-350 h-350 rounded-md overflow-hidden border-left-250">
-            <img src="./assets/images/AniJoyce-hello.png" class="object-contain"/>
-          </div>
-        </section>
-        <!--  Resume section end -->
+                <!-- Single resume end -->
 
-         <!--  Resume section start -->
-         <section id="education" class="relative lg:py-[100px] md:py-[70px]">
-          <div class="container mx-auto">
-            <!-- Section title start -->
-             <div class="flex justify-between items-center gap-[20px] lg:gap-[30px] mb-[55px] md:flex-wrap md:text-center">
-                  <div class="max-w-full lg:max-w-[575px]  w-full">
-                    <span class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px]">EDUCATION</span>
-                    <h2 class="text:[28px] lg:text-[48px] font-bold font-heebo leading-[36x] lg:leading-[58px] text-[#000248] dark:text-white">Resume of Education
-                      </h2>
+                <!-- Single resume start -->
+                <div class="slider-item">
+                  <span
+                    class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
+                  <div class="w-[70px] h-[70px]">
+                    <span
+                      class="w-[50px] h-[50px] hidden bg-accent1 text-white flex items-center rounded-full justify-center">
+                      <svg width="25" height="40" fill="currentColor" stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                          d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z" />
+                      </svg>
+                    </span>
                   </div>
-                  <div class="md:grow">
-                    <!-- <p class="text-[#636363] dark:text-slate-200 text-[17px] leading-[28px] lg:max-w-[472px] w-full">Promote your blog posts, case udie, and product ouncems
-                      with the the branded videoscustomers coming back for services Makes best effort.</p>
-                  </div> -->
-             </div>
-            <!-- Section title end -->
-
-            <!-- Resume wrapper start -->
-            <div class="flex flex-wrap flex-col">
-
-              <!-- Education -->
-              <div class="w-full sm:max-w-full flex-grow sm:mt-[40px]">
-                <div class="relative ltr:pl-[30px] rtl:pr-[30px]">
-                      <!-- border line -->
-                      <div class="absolute w-[1px] ltr:left-0 rtl:right-0 top-[10px] bottom-[5px] bg-accent1"></div>
-                      <!-- border line  end-->
-
-                       <!-- Single resume start -->
-                       <div class="flex ltr:pr-[50px] ltr:sm:pr-[0] ltr:lg:pr-[70px rtl:pl-[50px] rtl:sm:pl-[0] rtl:lg:pl-[70px relative">
-                        <span class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
-                        <div class="w-[70px] h-[70px]">
-                          <span class="w-[50px] h-[50px] bg-accent1 text-white flex items-center rounded-full justify-center">
-                            <svg width="25" height="44" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></svg>
-                          </span>
-                        </div>
-                        <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
-                            <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
-                              <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">Swift Developer Program 2022</h3>
-                              <span class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">Apple Coding Academy</span>
-                            </div>
-                            <!-- <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Promote your blog posts, case udie, and product ouncems nts with thehe branded videos.</p> -->
-                          <span class="text-[17px] font-medium text-accent1 relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2023</span>
-                        </div>
-                        </div>
-                        <!-- Single resume end -->
-
-                        <!-- Single resume start -->
-                        <div class="flex ltr:pr-[50px] ltr:sm:pr-[0] ltr:lg:pr-[70px rtl:pl-[50px] rtl:sm:pl-[0] rtl:lg:pl-[70px relative mt-[40px]">
-                          <span class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
-                          <div class="w-[70px] h-[70px]">
-                            <span class="w-[50px] h-[50px] bg-accent1 text-white flex items-center rounded-full justify-center">
-                              <svg width="25" height="44" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></svg>
-                            </span>
-                          </div>
-                          <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
-                              <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
-                                <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">Senior Technician in Development of Multiplatform Applications</h3>
-                                <span class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">IES Domingo Pérez Minik</span>
-                              </div>
-                              <!-- <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Promote your blog posts, case udie, and product ouncems nts with thehe branded videos.</p> -->
-                            <span class="text-[17px] font-medium text-accent1 relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2016</span>
-                          </div>
-                      </div>
-                      <!-- Single resume end -->
-
-                      <!-- Single resume start -->
-                      <div class="flex ltr:pr-[50px] ltr:sm:pr-[0] ltr:lg:pr-[70px rtl:pl-[50px] rtl:sm:pl-[0] rtl:lg:pl-[70px relative mt-[40px]">
-                        <span class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
-                        <div class="w-[70px] h-[70px]">
-                          <span class="w-[50px] h-[50px] bg-accent1 text-white flex items-center rounded-full justify-center">
-                            <svg width="25" height="44" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></svg>
-                          </span>
-                        </div>
-                        <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
-                            <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
-                              <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">Senior Technician in Informatic System Administration</h3>
-                              <span class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">IES La Estrella</span>
-                            </div>
-                            <!-- <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Promote your blog posts, case udie, and product ouncems nts with thehe branded videos.</p> -->
-                          <span class="text-[17px] font-medium text-accent1 relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2005</span>
-                        </div>
+                  <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
+                    <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
+                      <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">iOS
+                        Lead</h3>
+                      <!-- <span class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">Colkie</span> -->
                     </div>
-                    <!-- Single resume end -->
-
+                    <span
+                      class="text-[17px] font-medium text-accent1 relative before:absolute before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">Colkie</span>
+                    <span
+                      class="text-[17px] font-medium relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2022</span>
+                    <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Leading and Development of
+                      <b>Colkie</b> app using:
+                    </p>
+                    <li>Swift</li>
+                    <li>SwiftUI</li>
+                    <li>UIKit</li>
+                    <li>Combine</li>
+                    <li>Async/Await</li>
+                    <li>VIPER</li>
+                    <li>IAP Purchase</li>
+                    <li>AVFoundation</li>
+                    <li>SQLite</li>
+                    <li>API Rest</li>
+                    <!-- <span class="text-[17px] font-medium text-accent1 relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2022</span> -->
                   </div>
-              </div>
-              <!-- Education -->
-            </div>
-            <!-- Resume wrapper end -->
-          </div>
-          <div class="w-full flex flex-row-reverse">
-            <div class="w-350 h-350 rounded-full overflow-hidden">
-              <img src="./assets/images/AniJoyce-computer.png" class="object-contain"/>
-            </div>
-          </div>
-        </section>
-        <!--  Resume section end -->
+                </div>
+                <!-- Single resume end -->
 
-         <!--  Skill section start -->
-        <section id="skills" class="lg:pb-[100px] md:pb-[70px] relative">
-          <div class="container mx-auto">
-            <!-- Section title start -->
-              <div class="flex justify-between items-center gap-[20px] lg:gap-[30px] mb-[55px] md:flex-wrap md:text-center">
-                  <div class="max-w-full lg:max-w-[575px]  w-full">
-                    <span class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px]">SKILLs</span>
-                    <h2 class="text:[28px] lg:text-[48px] font-bold font-heebo leading-[36x] lg:leading-[58px] text-[#000248] dark:text-white">Software Development Skills.
-                      </h2>
+                <!-- Single resume start -->
+                <div class="slider-item">
+                  <span
+                    class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
+                  <div class="w-[70px] h-[70px]">
+                    <span
+                      class="w-[50px] h-[50px] hidden bg-accent1 text-white flex items-center rounded-full justify-center">
+                      <svg width="25" height="40" fill="currentColor" stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                          d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z" />
+                      </svg>
+                    </span>
                   </div>
-                  <div class="md:grow">
-                    <!-- <p class="text-[#636363] dark:text-slate-200 text-[17px] leading-[28px] lg:max-w-[472px] w-full">Promote your skills, case studies, and product ouncems -->
-                      <!-- with the the branded videoscustomers coming back for services Makes best effort.</p> -->
-                  </div>
-              </div>
-            <!-- Section title end -->
-
-            <!-- Resume wrapper start -->
-            <div class="flex justify-between items-center gap-[20px] lg:gap-[30px] md:flex-wrap md:text-center">
-
-                <!-- Column start -->
-                <div class="max-w-full lg:max-w-[472px]  w-full only-md:px-7 sm:px-5">
-
-                  <!-- Single skill start -->
-                  <div class="relative mb-7">
-                    <div class="flex justify-between mb-1">
-                      <li><span class="text-lg font-medium text-primary dark:text-white">Swift</span></li>
-                      <!-- <span class="text-xs font-medium text-white bg-accent1 dark:text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm before:absolute before:content-[''] before:bg-accent1 before:w-5 before:h-5 before:clip-polygon before:top-4 ltr:before:left-2 rtl:before:right-2 before:-z-10 ltr:left-[calc(90%_-_20px)] rtl:right-[calc(90%_-_20px)]">90%</span> -->
+                  <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
+                    <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
+                      <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">iOS
+                        Lead</h3>
+                      <!-- <span class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">Plexus Tech</span> -->
                     </div>
-                  <!-- <div class="w-full bg-gray-200 rounded-full h-[10px] dark:bg-gray-700 flex items-center">
+                    <span
+                      class="text-[17px] font-medium text-accent1 relative before:absolute before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">Plexus
+                      Tech</span>
+                    <span
+                      class="text-[17px] font-medium relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2020-2022</span>
+                    <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Leading and Development of
+                      <b>Santander Empresas</b> app using:
+                    </p>
+                    <li>Swift</li>
+                    <li>Objective-C</li>
+                    <li>UIKit</li>
+                    <li>VIPER</li>
+                    <li>API Rest / SOAP</li>
+                    <!-- <span class="text-[17px] font-medium text-accent1 relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2020-2022</span> -->
+                  </div>
+                </div>
+                <!-- Single resume end -->
+
+                <!-- Single resume start -->
+                <div class="slider-item">
+                  <span
+                    class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
+                  <div class="w-[70px] h-[70px]">
+                    <span
+                      class="w-[50px] h-[50px] hidden bg-accent1 text-white flex items-center rounded-full justify-center">
+                      <svg width="25" height="40" fill="currentColor" stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                          d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
+                    <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
+                      <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">iOS
+                        App developer</h3>
+                      <!-- <span class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">2Coders</span> -->
+                    </div>
+                    <span
+                      class="text-[17px] font-medium text-accent1 relative before:absolute before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2Coders</span>
+                    <span
+                      class="text-[17px] font-medium relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2020</span>
+                    <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Development and maintenance of
+                      <b>NFL Gamepass International</b> app using:
+                    </p>
+                    <li>Swift</li>
+                    <li>UIKit</li>
+                    <li>IAP Purchase</li>
+                    <li>Video streaming (DIVA framework) </li>
+                    <li>API Rest</li>
+                    <li>Urban Airship</li>
+                    <!-- <span class="text-[17px] font-medium text-accent1 relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2020</span> -->
+                  </div>
+                </div>
+                <!-- Single resume end -->
+
+                <!-- Single resume start -->
+                <div class="slider-item">
+                  <span
+                    class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
+                  <div class="w-[70px] h-[70px]">
+                    <span
+                      class="w-[50px] h-[50px] hidden bg-accent1 text-white flex items-center rounded-full justify-center">
+                      <svg width="25" height="40" fill="currentColor" stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                          d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
+                    <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
+                      <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">iOS
+                        App developer</h3>
+                      <!-- <span class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">Tempbuddy</span> -->
+                    </div>
+                    <span
+                      class="text-[17px] font-medium text-accent1 relative before:absolute before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">Tempbuddy</span>
+                    <span
+                      class="text-[17px] font-medium relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2019-2020</span>
+                    <!-- <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Development and maintenance of <b>Tempbuddy</b> app using:</p> -->
+                    <li>Swift</li>
+                    <li>UIKit</li>
+                    <li>CoreData</li>
+                    <li>API Rest</li>
+                    <li>Urban Airship</li>
+                    <!-- <span class="text-[17px] font-medium text-accent1 relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2019-2020</span> -->
+                  </div>
+                </div>
+                <!-- Single resume end -->
+
+                <!-- Single resume start -->
+                <div class="slider-item">
+                  <span
+                    class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
+                  <div class="w-[70px] h-[70px]">
+                    <span
+                      class="w-[50px] h-[50px] hidden bg-accent1 text-white flex items-center rounded-full justify-center">
+                      <svg width="25" height="40" fill="currentColor" stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                          d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
+                    <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
+                      <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">
+                        Mobile App Developer</h3>
+                      <!-- <span class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">ATOS IT Solutions and Services Iberia</span> -->
+                    </div>
+                    <span
+                      class="text-[17px] font-medium text-accent1 relative before:absolute before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">ATOS
+                      IT Solutions and Services Iberia</span>
+                    <span
+                      class="text-[17px] font-medium relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2016-2019</span>
+                    <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Development and maintenance apps
+                      (<b>Correos, McDonalds, BBVA...</b>) using:</p>
+                    <li>Swift</li>
+                    <li>Objective-C</li>
+                    <li>UIKit</li>
+                    <li>API Rest</li>
+                    <li>Firebase Cloud Messaging</li>
+                    <li>Cordova</li>
+                    <li>JQuery</li>
+                    <li>Angular</li>
+                    <li>Typescript</li>
+                  </div>
+                </div>
+                <!-- Single resume end -->
+              </div>
+              <span class="slider-arrow right">
+                <button id="arrow_right"
+                  class="rotate-right ltr:right-5 rtl:left-5 z-50 bg-accent1 text-white shadow-[0_2px_22px_rgba(0,0,0,0.16)] cursor-pointer translate-y-12 transition-all duration-300 leading-[1] w-11 h-11 rounded-full border-none flex items-center justify-center hover:bg-primary dark:hover:bg-dark_accent1">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ionicon w-6 leading-[1]" viewBox="0 0 512 512">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="48"
+                      d="M112 244l144-144 144 144M256 120v292" />
+                  </svg>
+                </button>
+                <!-- &gt;  -->
+              </span>
+            </div>
+            <!-- Skill -->
+          </div>
+          <!-- Resume wrapper end -->
+        </div>
+      </div>
+      <div class="relative flex sm:justify-center mt-[-150px]">
+        <div class="w-350 h-350 rounded-md overflow-hidden border-left-250">
+          <img src="./assets/images/AniJoyce-hello.png" class="object-contain" />
+        </div>
+      </div>
+    </section>
+    <!--  Resume section end -->
+
+    <!--  Resume section start -->
+    <section id="education" class="relative lg:py-[100px] md:py-[70px]">
+      <div class="container mx-auto">
+        <!-- Section title start -->
+        <div class="flex justify-between items-center gap-[20px] lg:gap-[30px] mb-[55px] md:flex-wrap md:text-center">
+          <div class="max-w-full lg:max-w-[575px] sm:w-full sm:justify-center sm:items-center">
+            <span class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px]">EDUCATION</span>
+            <h2
+              class="text:[28px] lg:text-[48px] font-bold font-heebo leading-[36x] lg:leading-[58px] text-[#000248] dark:text-white">
+              Resume of Education
+            </h2>
+          </div>
+          <!-- Section title end -->
+
+          <!-- Resume wrapper start -->
+          <div class="flex flex-wrap flex-col w-full">
+
+            <!-- Education -->
+            <div class="w-full sm:max-w-full flex-grow sm:mt-[40px]">
+              <div class="relative ltr:pl-[30px] rtl:pr-[30px]">
+                <!-- border line -->
+                <div class="absolute w-[1px] ltr:left-0 rtl:right-0 top-[10px] bottom-[5px] bg-accent1"></div>
+                <!-- border line  end-->
+
+                <!-- Single resume start -->
+                <div
+                  class="flex ltr:pr-[50px] ltr:sm:pr-[0] ltr:lg:pr-[70px rtl:pl-[50px] rtl:sm:pl-[0] rtl:lg:pl-[70px relative">
+                  <span
+                    class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
+                  <div class="w-[70px] h-[70px]">
+                    <span
+                      class="w-[50px] h-[50px] hidden bg-accent1 text-white flex items-center rounded-full justify-center">
+                      <svg width="25" height="44" fill="currentColor" stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                        <path
+                          d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
+                    <div
+                      class="flex items-center lg:justify-between only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
+                      <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">
+                        Swift Developer Program 2022</h3>
+                      <span
+                        class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">Apple
+                        Coding Academy</span>
+                    </div>
+                    <!-- <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Promote your blog posts, case udie, and product ouncems nts with thehe branded videos.</p> -->
+                    <span
+                      class="text-[17px] font-medium text-accent1 relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2023</span>
+                  </div>
+                </div>
+                <!-- Single resume end -->
+
+                <!-- Single resume start -->
+                <div
+                  class="flex ltr:pr-[50px] ltr:sm:pr-[0] ltr:lg:pr-[70px rtl:pl-[50px] rtl:sm:pl-[0] rtl:lg:pl-[70px relative mt-[40px]">
+                  <span
+                    class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
+                  <div class="w-[70px] h-[70px]">
+                    <span
+                      class="w-[50px] h-[50px] hidden bg-accent1 text-white flex items-center rounded-full justify-center">
+                      <svg width="25" height="44" fill="currentColor" stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                        <path
+                          d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
+                    <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
+                      <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">
+                        Senior Technician in Development of Multiplatform Applications</h3>
+                      <span
+                        class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">IES
+                        Domingo Pérez Minik</span>
+                    </div>
+                    <!-- <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Promote your blog posts, case udie, and product ouncems nts with thehe branded videos.</p> -->
+                    <span
+                      class="text-[17px] font-medium text-accent1 relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2016</span>
+                  </div>
+                </div>
+                <!-- Single resume end -->
+
+                <!-- Single resume start -->
+                <div
+                  class="flex ltr:pr-[50px] ltr:sm:pr-[0] ltr:lg:pr-[70px rtl:pl-[50px] rtl:sm:pl-[0] rtl:lg:pl-[70px relative mt-[40px]">
+                  <span
+                    class="absolute w-[20px] h-[20px] ltr:left-[-40px] rtl:right-[-40px] top-[10px] bg-accent1 rounded-full z-10 before:absolute before:bg-white before:w-[16px] before:h-[16px] before:rounded-full ltr:before:left-[2px] rtl:before:right-[2px] before:top-[2px]"></span>
+                  <div class="w-[70px] h-[70px]">
+                    <span
+                      class="w-[50px] h-[50px] hidden bg-accent1 text-white flex items-center rounded-full justify-center">
+                      <svg width="25" height="44" fill="currentColor" stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                        <path
+                          d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="flex-grow ltr:pl-[15px] rtl:pr-[15px]">
+                    <div class="flex items-center only-md:flex-col only-md:items-start 2xs:flex-col 2xs:items-start">
+                      <h3 class="font-heebo 2xs:text-[18px] text-[20px] lg:text-[25px] text-primary dark:text-white">
+                        Senior Technician in Informatic System Administration</h3>
+                      <span
+                        class="bg-accent1 text-white text-[13px] rounded-[30px] px-[15px] py-[5px] uppercase ltr:ml-[15px] rtl:mr-[15px] ltr:only-md:ml-0 only-md:my-[5px] ltr:2xs:ml-0 rtl:only-md:m-0 rtl:2xs:mr-0 2xs:my-[5px] text-center">IES
+                        La Estrella</span>
+                    </div>
+                    <!-- <p class="text-paragraph dark:text-slate-200 mt-[10px] text-[17px]">Promote your blog posts, case udie, and product ouncems nts with thehe branded videos.</p> -->
+                    <span
+                      class="text-[17px] font-medium text-accent1 relative ltr:pl-[20px] rtl:pr-[20px] before:absolute before:bg-accent1 before:w-[7px] before:h-[7px] ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] mt-[20px] block">2005</span>
+                  </div>
+                </div>
+                <!-- Single resume end -->
+
+              </div>
+            </div>
+            <!-- Education -->
+          </div>
+          <!-- Resume wrapper end -->
+        </div>
+      </div>
+      <div class="w-full flex flex-row-reverse mt-[-150px] sm:justify-center">
+        <div class="w-350 h-350 rounded-full overflow-hidden">
+          <img src="./assets/images/AniJoyce-computer.png" class="object-contain" />
+        </div>
+      </div>
+    </section>
+    <!--  Resume section end -->
+
+    <!--  Skill section start -->
+    <section id="skills" class="lg:pb-[100px] md:pb-[70px] relative">
+      <div class="container mx-auto">
+        <!-- Section title start -->
+        <div class="flex justify-between items-center gap-[20px] lg:gap-[30px] mb-[55px] md:flex-wrap md:text-center">
+          <div class="max-w-full lg:max-w-[575px]  w-full">
+            <span class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px]">SKILLs</span>
+            <h2
+              class="text:[28px] lg:text-[48px] font-bold font-heebo leading-[36x] lg:leading-[58px] text-[#000248] dark:text-white">
+              Software Development Skills.
+            </h2>
+          </div>
+          <div class="md:grow">
+            <!-- <p class="text-[#636363] dark:text-slate-200 text-[17px] leading-[28px] lg:max-w-[472px] w-full">Promote your skills, case studies, and product ouncems -->
+            <!-- with the the branded videoscustomers coming back for services Makes best effort.</p> -->
+          </div>
+        </div>
+        <!-- Section title end -->
+
+        <!-- Resume wrapper start -->
+        <div class="flex justify-between items-center gap-[20px] lg:gap-[30px] md:flex-wrap md:text-center">
+
+          <!-- Column start -->
+          <div class="max-w-full lg:max-w-[472px]  w-full only-md:px-7 sm:px-5">
+
+            <!-- Single skill start -->
+            <div class="relative mb-7">
+              <div class="flex justify-between mb-1">
+                <li><span class="text-lg font-medium text-primary dark:text-white">Swift</span></li>
+                <!-- <span class="text-xs font-medium text-white bg-accent1 dark:text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm before:absolute before:content-[''] before:bg-accent1 before:w-5 before:h-5 before:clip-polygon before:top-4 ltr:before:left-2 rtl:before:right-2 before:-z-10 ltr:left-[calc(90%_-_20px)] rtl:right-[calc(90%_-_20px)]">90%</span> -->
+              </div>
+              <!-- <div class="w-full bg-gray-200 rounded-full h-[10px] dark:bg-gray-700 flex items-center">
                         <div class="bg-accent1 h-[6px] rounded-full mx-[2px]" style="width: 90%"></div>
                     </div> -->
-                  </div>
-                  <!-- Single skill end -->
+            </div>
+            <!-- Single skill end -->
 
-                  <!-- Single skill start -->
-                  <div class="relative mb-7">
-                    <div class="flex justify-between mb-1">
-                      <li><span class="text-lg font-medium text-primary dark:text-white">SwiftUI</span></li>
-                      <!-- <span class="text-xs font-medium text-white bg-accent1 dark:text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm before:absolute before:content-[''] before:bg-accent1 before:w-5 before:h-5 before:clip-polygon before:top-4 before:left-2 before:-z-10 ltr:left-[calc(50%_-_20px)] rtl:right-[calc(50%_-20px)]">50%</span> -->
-                    </div>
-                  <!-- <div class="w-full bg-gray-200 rounded-full h-[10px] dark:bg-gray-700 flex items-center">
+            <!-- Single skill start -->
+            <div class="relative mb-7">
+              <div class="flex justify-between mb-1">
+                <li><span class="text-lg font-medium text-primary dark:text-white">SwiftUI</span></li>
+                <!-- <span class="text-xs font-medium text-white bg-accent1 dark:text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm before:absolute before:content-[''] before:bg-accent1 before:w-5 before:h-5 before:clip-polygon before:top-4 before:left-2 before:-z-10 ltr:left-[calc(50%_-_20px)] rtl:right-[calc(50%_-20px)]">50%</span> -->
+              </div>
+              <!-- <div class="w-full bg-gray-200 rounded-full h-[10px] dark:bg-gray-700 flex items-center">
                         <div class="bg-accent1 h-[6px] rounded-full mx-[2px]" style="width: 50%"></div>
                     </div> -->
-                  </div>
-                  <!-- Single skill end -->
+            </div>
+            <!-- Single skill end -->
 
-                  <!-- Single skill start -->
-                  <div class="relative mb-7">
-                    <div class="flex justify-between mb-1">
-                      <li><span class="text-lg font-medium text-primary dark:text-white">UIKit</span></li>
-                      <!-- <span class="text-xs font-medium text-white bg-accent1 dark:text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm before:absolute before:content-[''] before:bg-accent1 before:w-5 before:h-5 before:clip-polygon before:top-4 before:left-2 before:-z-10 ltr:left-[calc(90%_-_20px)] rtl:right-[calc(90%_-_20px)]">90%</span> -->
-                    </div>
-                  <!-- <div class="w-full bg-gray-200 rounded-full h-[10px] dark:bg-gray-700 flex items-center">
+            <!-- Single skill start -->
+            <div class="relative mb-7">
+              <div class="flex justify-between mb-1">
+                <li><span class="text-lg font-medium text-primary dark:text-white">UIKit</span></li>
+                <!-- <span class="text-xs font-medium text-white bg-accent1 dark:text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm before:absolute before:content-[''] before:bg-accent1 before:w-5 before:h-5 before:clip-polygon before:top-4 before:left-2 before:-z-10 ltr:left-[calc(90%_-_20px)] rtl:right-[calc(90%_-_20px)]">90%</span> -->
+              </div>
+              <!-- <div class="w-full bg-gray-200 rounded-full h-[10px] dark:bg-gray-700 flex items-center">
                         <div class="bg-accent1 h-[6px] rounded-full mx-[2px]" style="width: 90%"></div>
                     </div> -->
-                  </div>
-                  <!-- Single skill end -->
+            </div>
+            <!-- Single skill end -->
 
-                    <!-- Single skill start -->
-                    <div class="relative mb-7">
-                    <div class="flex justify-between mb-1">
-                      <li><span class="text-lg font-medium text-primary dark:text-white">Combine</span></li>
-                      <!-- <span class="text-xs font-medium text-white bg-accent1 dark:text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm before:absolute before:content-[''] before:bg-accent1 before:w-5 before:h-5 before:clip-polygon before:top-4 before:left-2 before:-z-10 ltr:left-[calc(60%_-_20px)] rtl:right-[calc(60%_-_20px)]">60%</span> -->
-                    </div>
-                  <!-- <div class="w-full bg-gray-200 rounded-full h-[10px] dark:bg-gray-700 flex items-center">
+            <!-- Single skill start -->
+            <div class="relative mb-7">
+              <div class="flex justify-between mb-1">
+                <li><span class="text-lg font-medium text-primary dark:text-white">Combine</span></li>
+                <!-- <span class="text-xs font-medium text-white bg-accent1 dark:text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm before:absolute before:content-[''] before:bg-accent1 before:w-5 before:h-5 before:clip-polygon before:top-4 before:left-2 before:-z-10 ltr:left-[calc(60%_-_20px)] rtl:right-[calc(60%_-_20px)]">60%</span> -->
+              </div>
+              <!-- <div class="w-full bg-gray-200 rounded-full h-[10px] dark:bg-gray-700 flex items-center">
                         <div class="bg-accent1 h-[6px] rounded-full mx-[2px]" style="width: 60%"></div>
                     </div> -->
-                  </div>
-                  <!-- Single skill end -->
+            </div>
+            <!-- Single skill end -->
 
-                </div>
-                <!-- Column end -->
+          </div>
+          <!-- Column end -->
 
-                <!-- Column start -->
-                <div class="max-w-full lg:max-w-[472px]  w-full only-md:px-7 sm:px-5">
-                    <!-- Single skill start -->
-                    <div class="relative mb-7">
-                      <div class="flex justify-between mb-1">
-                        <li><span class="text-lg font-medium text-primary dark:text-white">Async/Await</span></li>
-                        <!-- <span class="text-xs font-medium text-white bg-accent1 dark:text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm before:absolute before:content-[''] before:bg-accent1 before:w-5 before:h-5 before:clip-polygon before:top-4 before:left-2 before:-z-10 ltr:left-[calc(75%_-_20px)] rtl:right-[calc(75%_-_20px)]">75%</span> -->
-                      </div>
-                    <!-- <div class="w-full bg-gray-200 rounded-full h-[10px] dark:bg-gray-700 flex items-center">
+          <!-- Column start -->
+          <div class="max-w-full lg:max-w-[472px]  w-full only-md:px-7 sm:px-5">
+            <!-- Single skill start -->
+            <div class="relative mb-7">
+              <div class="flex justify-between mb-1">
+                <li><span class="text-lg font-medium text-primary dark:text-white">Async/Await</span></li>
+                <!-- <span class="text-xs font-medium text-white bg-accent1 dark:text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm before:absolute before:content-[''] before:bg-accent1 before:w-5 before:h-5 before:clip-polygon before:top-4 before:left-2 before:-z-10 ltr:left-[calc(75%_-_20px)] rtl:right-[calc(75%_-_20px)]">75%</span> -->
+              </div>
+              <!-- <div class="w-full bg-gray-200 rounded-full h-[10px] dark:bg-gray-700 flex items-center">
                           <div class="bg-accent1 h-[6px] rounded-full mx-[2px]" style="width: 75%"></div>
                       </div> -->
-                    </div>
-                    <!-- Single skill end -->
-                  
-                  <!-- Single skill start -->
-                  <div class="relative mb-7">
-                    <div class="flex justify-between mb-1">
-                      <li><span class="text-lg font-medium text-primary dark:text-white">Objective-C</span></li>
-                      <!-- <span class="text-xs font-medium text-white bg-accent1 dark:text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm before:absolute before:content-[''] before:bg-accent1 before:w-5 before:h-5 before:clip-polygon before:top-4 before:left-2 before:-z-10 ltr:left-[calc(45%_-_20px)] rtl:right-[calc(45%_-_20px)]">45%</span> -->
-                    </div>
-                  <!-- <div class="w-full bg-gray-200 rounded-full h-[10px] dark:bg-gray-700 flex items-center">
+            </div>
+            <!-- Single skill end -->
+
+            <!-- Single skill start -->
+            <div class="relative mb-7">
+              <div class="flex justify-between mb-1">
+                <li><span class="text-lg font-medium text-primary dark:text-white">Objective-C</span></li>
+                <!-- <span class="text-xs font-medium text-white bg-accent1 dark:text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm before:absolute before:content-[''] before:bg-accent1 before:w-5 before:h-5 before:clip-polygon before:top-4 before:left-2 before:-z-10 ltr:left-[calc(45%_-_20px)] rtl:right-[calc(45%_-_20px)]">45%</span> -->
+              </div>
+              <!-- <div class="w-full bg-gray-200 rounded-full h-[10px] dark:bg-gray-700 flex items-center">
                         <div class="bg-accent1 h-[6px] rounded-full mx-[2px]" style="width: 45%"></div>
                     </div> -->
-                  </div>
-                  <!-- Single skill end -->
-                  
-                  <!-- Single skill start -->
-                  <div class="relative mb-7">
-                    <div class="flex justify-between mb-1">
-                      <li><span class="text-lg font-medium text-primary dark:text-white">Unit Test</span></li>
-                      <!-- <span class="text-xs font-medium text-white bg-accent1 dark:text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm before:absolute before:content-[''] before:bg-accent1 before:w-5 before:h-5 before:clip-polygon before:top-4 before:left-2 before:-z-10 ltr:left-[calc(50%_-_20px)] rtl:right-[calc(50%_-_20px)]">50%</span> -->
-                    </div>
-                  <!-- <div class="w-full bg-gray-200 rounded-full h-[10px] dark:bg-gray-700 flex items-center">
+            </div>
+            <!-- Single skill end -->
+
+            <!-- Single skill start -->
+            <div class="relative mb-7">
+              <div class="flex justify-between mb-1">
+                <li><span class="text-lg font-medium text-primary dark:text-white">Unit Test</span></li>
+                <!-- <span class="text-xs font-medium text-white bg-accent1 dark:text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm before:absolute before:content-[''] before:bg-accent1 before:w-5 before:h-5 before:clip-polygon before:top-4 before:left-2 before:-z-10 ltr:left-[calc(50%_-_20px)] rtl:right-[calc(50%_-_20px)]">50%</span> -->
+              </div>
+              <!-- <div class="w-full bg-gray-200 rounded-full h-[10px] dark:bg-gray-700 flex items-center">
                         <div class="bg-accent1 h-[6px] rounded-full mx-[2px]" style="width: 50%"></div>
                     </div> -->
-                  </div>
-                  <!-- Single skill end -->
+            </div>
+            <!-- Single skill end -->
 
-                   <!-- Single skill start -->
-                   <div class="relative mb-7">
-                    <div class="flex justify-between mb-1">
-                      <li><span class="text-lg font-medium text-primary dark:text-white">VIPER/MVVM</span></li>
-                      <!-- <span class="text-xs font-medium text-white bg-accent1 dark:text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm before:absolute before:content-[''] before:bg-accent1 before:w-5 before:h-5 before:clip-polygon before:top-4 before:left-2 before:-z-10 ltr:left-[calc(85%_-_20px)] rtl:right-[calc(85%_-_20px)]">85%</span> -->
-                    </div>
-                  <!-- <div class="w-full bg-gray-200 rounded-full h-[10px] dark:bg-gray-700 flex items-center">
+            <!-- Single skill start -->
+            <div class="relative mb-7">
+              <div class="flex justify-between mb-1">
+                <li><span class="text-lg font-medium text-primary dark:text-white">VIPER/MVVM</span></li>
+                <!-- <span class="text-xs font-medium text-white bg-accent1 dark:text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm before:absolute before:content-[''] before:bg-accent1 before:w-5 before:h-5 before:clip-polygon before:top-4 before:left-2 before:-z-10 ltr:left-[calc(85%_-_20px)] rtl:right-[calc(85%_-_20px)]">85%</span> -->
+              </div>
+              <!-- <div class="w-full bg-gray-200 rounded-full h-[10px] dark:bg-gray-700 flex items-center">
                         <div class="bg-accent1 h-[6px] rounded-full mx-[2px]" style="width: 85%"></div>
                     </div> -->
-                  </div>
-                  <!-- Single skill end -->
-
-                </div>
-                <!-- Column end -->
-              
             </div>
-            <!-- Resume wrapper end -->
-          </div>
-          <div class="w-350 h-350 rounded-full overflow-hidden">
-            <img src="./assets/images/AniJoyce-here.png" class="object-contain"/>
-          </div>
-        </section>
-        <!--  Skill section end -->
+            <!-- Single skill end -->
 
-        <!-- Contact form section start -->
-        <section class="py-[70px] lg:py-[100px] mb-[270px] bg-cover bg-no-repeat bg-center bg-[url('../images/contact-bg.png')] bg-[#ECF1F6] dark:bg-[url('../images/contact-bg-dark.png')] dark:bg-dark_primary_bg relative" id="contact">
-          <div class="container mx-auto">
-            <!-- Form wrapper start -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-              <div>
-                <!-- Section title -->
-                  <div class="mb-[55px] md:text-center">
-                      <span class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px]">CONTACT</span>
-                      <h2 class="text:[28px] lg:text-[48px] font-bold font-heebo leading-[36x] lg:leading-[58px] text-[#000248] dark:text-white">My contact information</h2>
-                      <!-- <p class="text-[#636363] dark:text-slate-200 text-[17px] leading-[28px] lg:max-w-[472px] w-full">Promote your blog posts, case udie, and product ouncems
+          </div>
+          <!-- Column end -->
+
+        </div>
+        <!-- Resume wrapper end -->
+      </div>
+      <div class="w-full flex sm:justify-center">
+        <div class="w-350 h-350 rounded-full overflow-hidden">
+          <img src="./assets/images/AniJoyce-here.png" class="object-contain" />
+        </div>
+      </div>
+    </section>
+    <!--  Skill section end -->
+
+    <!-- Contact form section start -->
+    <section
+      class="py-[70px] lg:py-[100px] mb-[270px] bg-cover bg-no-repeat bg-center bg-[url('../images/contact-bg.png')] bg-[#ECF1F6] dark:bg-[url('../images/contact-bg-dark.png')] dark:bg-dark_primary_bg relative"
+      id="contact">
+      <div class="container mx-auto">
+        <!-- Form wrapper start -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+          <div>
+            <!-- Section title -->
+            <div class="mb-[55px] md:text-center">
+              <span class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px]">CONTACT</span>
+              <h2
+                class="text:[28px] lg:text-[48px] font-bold font-heebo leading-[36x] lg:leading-[58px] text-[#000248] dark:text-white">
+                My contact information</h2>
+              <!-- <p class="text-[#636363] dark:text-slate-200 text-[17px] leading-[28px] lg:max-w-[472px] w-full">Promote your blog posts, case udie, and product ouncems
                         with the the branded videoscustomers coming back for
                         services Makes best effort.</p> -->
-                  </div>
-                <!-- Section title end -->
-                
-                <!-- from inner start-->
-                  <!-- <form action="#">
+            </div>
+            <!-- Section title end -->
+
+            <!-- from inner start-->
+            <!-- <form action="#">
                       <div class="grid grid-cols-2 gap-7">
                           <div>
                             <input class="w-full bg-white rounded px-5 py-2 h-11 dark:bg-transparent dark:text-slate-300 dark:border dark:border-slate-600" type="text" name="name" placeholder="Your name" >
@@ -705,114 +872,147 @@
                       </div>
                       <button class="btn solid-btn mt-12">Send Request</button>
                   </form> -->
-                <!-- from inner end -->
-              <!-- </div>
+            <!-- from inner end -->
+            <!-- </div>
 
               <div class="ltr:only-md:pl-[30px] ltr:lg:pl-[50px] rtl:only-md:pr-[30px] rtl:lg:pr-[50px] mt-[30px] lg:mt-[150px] md:flex md:gap-[30px] md:flex-wrap"> -->
-                  <!-- Single contact info start -->
-                  <div class="flex items-center">
-                    <div>
-                      <span class="w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] bg-accent1 text-white flex items-center rounded-full justify-center">                        
-                        <svg width="25" height="34" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
-                      </span>
-                    </div>
-                    <div class="ltr:pl-6 rtl:pr-6">
-                       <h3 class="text-[28px] md:text-[22px] font-heebo font-bold text-primary dark:text-white">Phone</h3>
-                       <span class="text-primary dark:text-slate-200 text-[22px] md:text-[18px] mt-5">+34 696 656 235</span>
-                    </div>
-                  </div>
-                  <!-- Single contact info end -->
-
-                  <!-- Single contact info start -->
-                  <div class="flex items-center lg:mt-7">
-                    <div>
-                      <span class="w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] bg-accent1 text-white flex items-center rounded-full justify-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                      </span>
-                    </div>
-                    <div class="ltr:pl-6 rtl:pr-6">
-                       <h3 class="text-[28px] md:text-[22px] font-heebo font-bold text-primary dark:text-white">Email</h3>
-                       <span class="text-primary  dark:text-slate-200 text-[22px] md:text-[18px] mt-5">joyce.rosbat@gmail.com</span>
-                    </div>
-                  </div>
-                  <!-- Single contact info end -->
-
-                  <!-- Single contact info start -->
-                  <div class="flex items-center lg:mt-7">
-                    <div>
-                      <span class="w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] bg-accent1 text-white flex items-center rounded-full justify-center">
-                        <svg width="32" height="34" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z"/></svg>
-                      </span>
-                    </div>
-                    <div class="ltr:pl-6 rtl:pr-6">
-                       <h3 class="text-[28px] md:text-[22px] font-heebo font-bold text-primary dark:text-white">Address</h3>
-                       <span class="text-primary  dark:text-slate-200 text-[22px] md:text-[18px] mt-5">Tenerife<br>
-                        Canary Islands
-                        </span>
-                    </div>
-                  </div>
-                  <!-- Single contact info end -->
-
+            <!-- Single contact info start -->
+            <div class="flex items-center">
+              <div>
+                <span
+                  class="w-[50px] h-[50px] hidden lg:w-[70px] lg:h-[70px] bg-accent1 text-white flex items-center rounded-full justify-center">
+                  <svg width="25" height="34" fill="currentColor" stroke="currentColor"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                      d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+                  </svg>
+                </span>
               </div>
-              <div class="flex flex-row-reverse items-end">
-                <div class="w-350 h-350 rounded-md overflow-hidden border-right-250">
-                  <img src="./assets/images/AniJoyce-bye.png" class="object-contain"/>
-                </div>
+              <div class="ltr:pl-6 rtl:pr-6">
+                <h3 class="text-[28px] md:text-[22px] font-heebo font-bold text-primary dark:text-white">Phone</h3>
+                <span class="text-primary dark:text-slate-200 text-[22px] md:text-[18px] mt-5">+34 696 656 235</span>
               </div>
             </div>
-            <!-- Form wrapper end -->
+            <!-- Single contact info end -->
 
-            <!-- Google map start  -->
-            <div class="mb-[-275px] pt-[70px] lg:pt-[100px]">
-              <div style="width: 100%"><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d449686.0355566107!2d-16.802846894317682!3d28.293108772857533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc4029effe8682ed%3A0xb01a4bf1c84baf3c!2sTenerife!5e0!3m2!1ses!2ses!4v1678737402773!5m2!1ses!2ses"><a href="https://www.maps.ie/distance-area-calculator.html">distance maps</a></iframe></div>
+            <!-- Single contact info start -->
+            <div class="flex items-center lg:mt-7">
+              <div>
+                <span
+                  class="w-[50px] h-[50px] hidden lg:w-[70px] lg:h-[70px] bg-accent1 text-white flex items-center rounded-full justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-mail">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </span>
+              </div>
+              <div class="ltr:pl-6 rtl:pr-6">
+                <h3 class="text-[28px] md:text-[22px] font-heebo font-bold text-primary dark:text-white">Email</h3>
+                <span
+                  class="text-primary  dark:text-slate-200 text-[22px] md:text-[18px] mt-5">joyce.rosbat@gmail.com</span>
+              </div>
             </div>
-            <!-- Google map send -->
-            
-          </div>
-        </section>
-        <!-- Contact form section end -->
-      </main>
-      <!-- Main wrapper end -->
+            <!-- Single contact info end -->
 
+            <!-- Single contact info start -->
+            <div class="flex items-center lg:mt-7">
+              <div>
+                <span
+                  class="w-[50px] h-[50px] hidden lg:w-[70px] lg:h-[70px] bg-accent1 text-white flex items-center rounded-full justify-center">
+                  <svg width="32" height="34" fill="currentColor" stroke="currentColor"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path
+                      d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z" />
+                  </svg>
+                </span>
+              </div>
+              <div class="ltr:pl-6 rtl:pr-6">
+                <h3 class="text-[28px] md:text-[22px] font-heebo font-bold text-primary dark:text-white">Address</h3>
+                <span class="text-primary  dark:text-slate-200 text-[22px] md:text-[18px] mt-5">Tenerife<br>
+                  Canary Islands
+                </span>
+              </div>
+            </div>
+            <!-- Single contact info end -->
 
-    <!-- Footer start -->
-      <footer class="py-[50px] bg-cover bg-no-repeat bg-center bg-[url('../images/footer-bg.png')] bg-[#EFF3F7] dark:bg-[url('../images/footer-bg-dark.png')] dark:bg-dark_primary_bg dark:border-t dark:border-dark_accent1">
-      <div class="container mx-auto">
-          <div class="grid grid-cols-1 only-md:grid-cols-2 lg:grid-cols-2">
-              <div class="flex">
-                <p class="flex items-center flex-wrap sm:justify-center dark:text-slate-200">Joyce Rosario Batista<span class="px-[3px] text-paragraph dark:text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="text-paragraph" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                  </span><span class=" px-[3px]"><a class="text-accent1 hover:font-bold" href="#">iOS Developer</a></span></p>
-              </div>
-              <div class="flex items-center justify-end gap-8 sm:justify-center sm:mt-[15px]">
-                  <!-- <a href="#" class="text-paragraph dark:text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]">Terms & Condition</a>
-                  <a href="#" class="text-paragraph dark:text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Privacy Policy</a> -->
-              </div>
           </div>
+          <div class="flex flex-row-reverse items-end">
+            <div class="w-350 h-350 rounded-md overflow-hidden border-right-250">
+              <img src="./assets/images/AniJoyce-bye.png" class="object-contain" />
+            </div>
+          </div>
+        </div>
+        <!-- Form wrapper end -->
+
+        <!-- Google map start  -->
+        <div class="mb-[-275px] pt-[70px] lg:pt-[100px]">
+          <div style="width: 100%"><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0"
+              marginwidth="0"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d449686.0355566107!2d-16.802846894317682!3d28.293108772857533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc4029effe8682ed%3A0xb01a4bf1c84baf3c!2sTenerife!5e0!3m2!1ses!2ses!4v1678737402773!5m2!1ses!2ses"><a
+                href="https://www.maps.ie/distance-area-calculator.html">distance maps</a></iframe></div>
+        </div>
+        <!-- Google map send -->
+
       </div>
-    </footer>
-    <!-- Footer end -->
-
-    <!-- Back to top start -->
-    <button id="scroll__top" class="fixed bottom-12 ltr:right-5 rtl:left-5 z-50 bg-accent1 text-white shadow-[0_2px_22px_rgba(0,0,0,0.16)] cursor-pointer translate-y-12 opacity-0 invisible transition-all duration-300 leading-[1] w-11 h-11 rounded-full border-none flex items-center justify-center hover:bg-primary dark:hover:bg-dark_accent1">
-      <svg xmlns="http://www.w3.org/2000/svg" class="ionicon w-6 leading-[1]" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round"  stroke-width="48" d="M112 244l144-144 144 144M256 120v292"/></svg>
-    </button>  
-    <!-- Back to top end -->
+    </section>
+    <!-- Contact form section end -->
+  </main>
+  <!-- Main wrapper end -->
 
 
+  <!-- Footer start -->
+  <footer
+    class="py-[50px] bg-cover bg-no-repeat bg-center bg-[url('../images/footer-bg.png')] bg-[#EFF3F7] dark:bg-[url('../images/footer-bg-dark.png')] dark:bg-dark_primary_bg dark:border-t dark:border-dark_accent1">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 only-md:grid-cols-2 lg:grid-cols-2">
+        <div class="flex">
+          <p class="flex items-center flex-wrap sm:justify-center dark:text-slate-200">Joyce Rosario Batista<span
+              class="px-[3px] text-paragraph dark:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                stroke="text-paragraph" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-heart">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+            </span><span class=" px-[3px]"><a class="text-accent1 hover:font-bold" href="#">iOS Developer</a></span></p>
+        </div>
+        <div class="flex items-center justify-end gap-8 sm:justify-center sm:mt-[15px]">
+          <!-- <a href="#" class="text-paragraph dark:text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]">Terms & Condition</a>
+                  <a href="#" class="text-paragraph dark:text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Privacy Policy</a> -->
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer end -->
 
-    <!-------- Plugins js ------>
+  <!-- Back to top start -->
+  <button id="scroll__top"
+    class="fixed bottom-12 ltr:right-5 rtl:left-5 z-50 bg-accent1 text-white shadow-[0_2px_22px_rgba(0,0,0,0.16)] cursor-pointer translate-y-12 opacity-0 invisible transition-all duration-300 leading-[1] w-11 h-11 rounded-full border-none flex items-center justify-center hover:bg-primary dark:hover:bg-dark_accent1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon w-6 leading-[1]" viewBox="0 0 512 512">
+      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="48"
+        d="M112 244l144-144 144 144M256 120v292" />
+    </svg>
+  </button>
+  <!-- Back to top end -->
 
-    <!-- Swiper js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    
-    <!-- imagesloaded js -->
-    <script src="./assets/js/imagesloaded.pkgd.min.js" defer></script>
 
-    <!-- Isotope js -->
-    <script src="./assets/js/isotope.pkgd.min.js" defer></script>
 
-    <!-- Custom js -->
-    <script src="./assets/js/script.js" defer></script>
-  </body>
+  <!-------- Plugins js ------>
+
+  <!-- Swiper js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- imagesloaded js -->
+  <script src="./assets/js/imagesloaded.pkgd.min.js" defer></script>
+
+  <!-- Isotope js -->
+  <script src="./assets/js/isotope.pkgd.min.js" defer></script>
+
+  <!-- Custom js -->
+  <script src="./assets/js/script.js" defer></script>
+</body>
+
 </html>
