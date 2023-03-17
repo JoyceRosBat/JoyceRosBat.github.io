@@ -429,12 +429,18 @@ function clickLeft() {
   if (index > 0) {
     index--
     container.style.transform = `translateX(-${index * slider.offsetWidth}px)`
+  } else {
+    index =  (items.length - 1)
+    container.style.transform = `translateX(-${index * slider.offsetWidth}px)`
   }
 }
 
 function clickRight() {
   if (index < (items.length - 1)) {
     index++
+    container.style.transform = `translateX(-${index * slider.offsetWidth}px)`
+  } else {
+    index = 0
     container.style.transform = `translateX(-${index * slider.offsetWidth}px)`
   }
 }
