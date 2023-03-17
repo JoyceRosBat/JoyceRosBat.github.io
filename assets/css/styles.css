@@ -5332,3 +5332,11 @@ button.is-checked {
 .mt-\[-150px\] {
   margin-top: -150px;
 }
+
+.w-\[36px\] {
+  width: 36px;
+}
+
+.h-\[36px\] {
+  height: 36px;
+}
