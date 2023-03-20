@@ -1601,6 +1601,11 @@ button {
   padding-bottom: 10px;
 }
 
+.py-\[30px\] {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .py-7 {
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
@@ -5303,6 +5308,10 @@ button.is-checked {
 
 .border-right-250 {
   border-radius: 0 0 250px 0;
+}
+
+.border-bottom-250 {
+  border-radius: 0 0 250px 250px;
 }
 
 .float-right {

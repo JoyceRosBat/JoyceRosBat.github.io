@@ -204,7 +204,7 @@
               <!-- <img class="relative z-10 sm:mx-auto" src="./assets/images/swift-logo.svg" alt=""> -->
               <img class="absolute" src="./assets/images/swift-logo.svg" alt="">
               <div class="relative">
-                <video width="500" height="500" autoplay muted loop>
+                <video width="500" height="500" autoplay muted loop playsinline>
                   <source src="./assets/videos/joyce-moji.mov" type="video/mov">
                   <source src="./assets/videos/joyce-moji.mp4" type="video/mp4">
                 </video>
@@ -224,7 +224,7 @@
     <!-- About me section end -->
 
     <!--  Resume section start -->
-    <section id="experience" class="relative lg:py-[100px] md:py-[70px]">
+    <section id="experience" class="relative">
       <div class="container mx-auto">
         <!-- Section title start -->
         <div class="flex justify-between items-center gap-[20px] lg:gap-[30px] md:flex-wrap md:text-center">
@@ -606,7 +606,7 @@
         </div>
       </div>
       <div class="w-full flex flex-row-reverse mt-[-150px] sm:justify-center">
-        <div class="w-350 h-350 rounded-full overflow-hidden">
+        <div class="w-350 h-350 rounded-full clear-right py-[30px] overflow-hidden">
           <img src="./assets/images/AniJoyce-computer.png" class="object-contain" />
         </div>
       </div>
@@ -690,7 +690,7 @@
           <!-- Column end -->
 
           <!-- Column start -->
-          <div class="max-w-full lg:max-w-[472px]  w-full only-md:px-7 sm:px-5">
+          <div class="max-w-full lg:max-w-[472px] w-full only-md:px-7 sm:px-5">
             <!-- Single skill start -->
             <div class="relative mb-7">
               <div class="flex justify-between mb-1">
@@ -746,9 +746,7 @@
         <!-- Resume wrapper end -->
       </div>
       <div class="w-full flex sm:justify-center">
-        <div class="w-350 h-350 rounded-full overflow-hidden">
-          <img src="./assets/images/AniJoyce-here.png" class="object-contain" />
-        </div>
+        <img src="./assets/images/AniJoyce-here.png" class="w-350 h-350 border-bottom-250 overflow-hidden" />
       </div>
     </section>
     <!--  Skill section end -->
@@ -806,7 +804,9 @@
               </div>
               <div class="ltr:pl-6 rtl:pr-6">
                 <h3 class="text-[28px] md:text-[22px] font-heebo font-bold text-primary dark:text-white">Phone</h3>
-                <span class="text-primary dark:text-slate-200 text-[22px] md:text-[18px] mt-5">+34 696 656 235</span>
+                <span class="text-primary dark:text-slate-200 text-[22px] md:text-[18px] mt-5">
+                  <a href="tel:+34 696 656 235">+34 696 656 235</a>
+                </span>
               </div>
             </div>
             <!-- Single contact info end -->
@@ -827,7 +827,9 @@
               <div class="ltr:pl-6 rtl:pr-6">
                 <h3 class="text-[28px] md:text-[22px] font-heebo font-bold text-primary dark:text-white">Email</h3>
                 <span
-                  class="text-primary  dark:text-slate-200 text-[22px] md:text-[18px] mt-5">joyce.rosbat@gmail.com</span>
+                  class="text-primary dark:text-slate-200 text-[22px] md:text-[18px] mt-5">
+                  <a href = "mailto: joyce.rosbat@gmail.com">joyce.rosbat@gmail.com</a>
+                </span>
               </div>
             </div>
             <!-- Single contact info end -->
